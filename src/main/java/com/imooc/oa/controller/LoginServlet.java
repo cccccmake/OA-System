@@ -39,7 +39,7 @@ public class LoginServlet extends HttpServlet {
             user.setPassword(null);
             user.setSalt(null);
             // process result, 0 indicates success
-            Map data = new LinkedHashMap();
+            // Map data = new LinkedHashMap();
             responseUtils = new ResponseUtils().put("user", user);
         }catch (Exception e){
             e.printStackTrace();
