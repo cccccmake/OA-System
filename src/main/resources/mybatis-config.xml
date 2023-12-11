@@ -24,5 +24,13 @@
     <mappers>
         <mapper resource="mappers/test.xml"/>
         <mapper resource="mappers/user.xml"/>
+        <mapper resource="mappers/rbac.xml"/>
+        <mapper resource="mappers/employee.xml"/>
+<!--        <mapper class="com.imooc.oa.mapper.EmployeeMapper"/>-->
+        <mapper resource="mappers/leave_form.xml"/>
+        <mapper resource="mappers/process_flow.xml"/>
+        <mapper resource="mappers/notice.xml"/>
+        <mapper resource="mappers/department.xml"/>
     </mappers>
+
 </configuration>

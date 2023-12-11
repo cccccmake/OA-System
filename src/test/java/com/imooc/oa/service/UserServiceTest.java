@@ -10,13 +10,13 @@ public class UserServiceTest {
 
     @Test
     public void checkLogin1() {
-        User user = userService.checkLogin("test", "test");
+        User user = userService.checkLogin("m8", "test");
         System.out.println(user);
     }
 
     @Test
     public void checkLogin2() {
-        User user = userService.checkLogin("test", "test1");
+        User user = userService.checkLogin("m8", "test1");
         System.out.println(user);
     }
 

@@ -64,6 +64,22 @@
                     form.validate((valid) => {
                         if(valid){
                             console.info("Succeed, ready to submit data");
+                            const params = new URLSearchParams();
+                            const $message = this.$message;
+                            const form = this.form;
+                            params.append("username", form.username);
+                            params.append("password", form.password);
+                            axios.post("/api/login", params, {}).then(function(response){
+                                console.info(response);
+                                const json = response.data;
+                                if(json.code == "0"){
+                                    sessionStorage.uid = json.data.user.userId;
+                                    sessionStorage.eid = json.data.user.employeeId;
+                                    window.location.href = "/index.html";
+                                }else{
+                                    $message.error({message:json.message, offset: 100})
+                                }
+                            })
                         }
                     })
                 }
